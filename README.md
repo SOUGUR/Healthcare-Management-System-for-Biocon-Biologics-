@@ -1,7 +1,7 @@
 
 ## screenshots
 ### Homepage
-![homepage snap]
+
 ### Admin Dashboard
 admin
 password: 1234
