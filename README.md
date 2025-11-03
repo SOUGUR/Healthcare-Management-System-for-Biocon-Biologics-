@@ -1,6 +1,6 @@
 # Healthcare Management System for Biocon Biologics
 
-## Formal Project Description
+## Project Description
 The Healthcare Management System is designed to optimize hospital operations with modular management of Admin, Doctor, and Patient roles. It streamlines account management, appointment scheduling, patient admission/discharge, invoice generation, and secure handling of sensitive data.
 
 ## Features and Concepts
