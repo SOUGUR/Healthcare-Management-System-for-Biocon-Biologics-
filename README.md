@@ -1,77 +1,40 @@
+# Healthcare Management System for Biocon Biologics
 
-## screenshots
-### Homepage
+## Formal Project Description
+The Healthcare Management System is designed to optimize hospital operations with modular management of Admin, Doctor, and Patient roles. It streamlines account management, appointment scheduling, patient admission/discharge, invoice generation, and secure handling of sensitive data.
 
-### Admin Dashboard
-admin
-password: 1234
-email: admin123@gmail.com
-![dashboard snap]
-### Invoice
-![invoice snap]
-### Doctor list
-![doctor snap](
----
-## Functions
-### Admin
-- Signup their account. Then Login (No approval Required).
-- Can register/view/approve/reject/delete doctor (approve those doctor who applied for job in their hospital).
-- Can admit/view/approve/reject/discharge patient (discharge patient when treatment is done).
-- Can Generate/Download Invoice pdf (Generate Invoice according to medicine cost, room charge, doctor charge and other charge).
-- Can view/book/approve Appointment (approve those appointments which is requested by patient).
+## Features and Concepts
+### 1. User Roles & Access Control
+- Admin: System oversight, approval of registrations, appointment administration, invoice management
+- Doctor: Patient management, appointment handling, patient discharge
+- Patient: Registration, appointment booking, status tracking, invoice access
 
-### Doctor
-- Apply for job in hospital. Then Login (Approval required by hospital admin, Then only doctor can login).
-- Can only view their patient details (symptoms, name, mobile ) assigned to that doctor by admin.
-- Can view their discharged(by admin) patient list.
-- Can view their Appointments, booked by admin.
-- Can delete their Appointment, when doctor attended their appointment.
+### 2. Workflow Management
+- Approval-driven user registration
+- Multi-step appointment and discharge flows
 
-### Patient
-- Create account for admit in hospital. Then Login (Approval required by hospital admin, Then only patient can login).
-- Can view assigned doctor's details like ( specialization, mobile, address).
-- Can view their booked appointment status (pending/confirmed by admin).
-- Can book appointments.(approval required by admin)
-- Can view/download Invoice pdf (Only when that patient is discharged by admin).
+### 3. Invoice & PDF Generation
+- Dynamic invoice creation based on treatments and services
+- Secure PDF access tied to patient discharge status
 
----
+### 4. Technology Stack
+- Django (Python 3.7+), HTML, CSS, xhtml2pdf
+- Django ORM and authentication
 
-## HOW TO RUN THIS PROJECT
-- Install Python(3.7.6) (Dont Forget to Tick Add to Path while installing Python)
-- Open Terminal and Execute Following Commands :
-```
-pip install django==3.0.5
-pip install django-widget-tweaks
-pip install xhtml2pdf
-```
-- Download This Project Zip Folder and Extract it
-- Move to project folder in Terminal. Then run following Commands :
-```
-py manage.py makemigrations
-py manage.py migrate
-py manage.py runserver
-```
-- Now enter following URL in Your Browser Installed On Your Pc
-```
-http://127.0.0.1:8000/
-```
+### 5. Email & Communication
+- Built-in email contact integration
 
-## CHANGES REQUIRED FOR CONTACT US PAGE
-- In settins.py file, You have to give your email and password
-```
-EMAIL_HOST_USER = 'youremail@gmail.com'
-EMAIL_HOST_PASSWORD = 'your email password'
-EMAIL_RECEIVING_USER = 'youremail@gmail.com'
-```
-- Login to gmail through host email id in your browser and open following link and turn it ON
-```
-https://myaccount.google.com/lesssecureapps
-```
-## Drawbacks/LoopHoles
-- Any one can be Admin. There is no Approval required for admin account. So you can disable admin signup process and use any logic like creating superuser.
-- There should be at least one doctor in hospital before admitting patient. So first add doctor.
-- On update page of doctor/patient you must have to update password.
+### 6. Deployment Guidelines
+- Setup, migration, and server initiation instructions
+
+## Skills Demonstrated
+- Django web development
+- Relational database modeling
+- Data validation & approval flows
+- Secure static/media file handling
+- Role-based authentication
+- Real-time dashboard implementation
+- PDF generation and restricted file delivery
 
 ## Disclaimer
-This project is developed for demo purpose and it's not supposed to be used in real application.
-
+This project is for demonstration purposes and requires further enhancement for production deployment and compliance.
